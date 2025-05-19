@@ -1,21 +1,88 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семантическая вёрстка</title>
-  </head>
-  <body>
-    <header>
-      <img src="logo.png" alt="Логотип сайта">
-      <nav>
-        <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">Каталог ресурсов</a></li>
-          <li><a href="#">О проекте</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
+    <title>Lamborghini Countach - Legendary Supercar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">COUNTACH</div>
+            <ul class="nav-links">
+                <li><a href="#history">История</a></li>
+                <li><a href="#specs">Характеристики</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#legacy">Наследие</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>LAMBORGHINI COUNTACH</h1>
+            <p>Икона, определившая поколение</p>
+        </div>
     </header>
-  </body>
+
+    <main>
+        <section id="history" class="section">
+            <h2>История</h2>
+            <div class="content">
+                <p>Lamborghini Countach - это среднемоторный спортивный автомобиль с задним приводом, производившийся итальянским производителем Lamborghini с 1974 по 1990 год. Его характерный клиновидный дизайн и двери типа "ножницы" произвели революцию в эстетике суперкаров.</p>
+                <p>Впервые представленный как концепт в 1971 году, Countach стал постером на стену для целого поколения, представляя собой вершину автомобильного дизайна и инженерии.</p>
+            </div>
+        </section>
+
+        <section id="specs" class="section">
+            <h2>Характеристики</h2>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <h3>Двигатель</h3>
+                    <p>V12, 5.2L</p>
+                </div>
+                <div class="spec-card">
+                    <h3>Мощность</h3>
+                    <p>455 л.с.</p>
+                </div>
+                <div class="spec-card">
+                    <h3>Разгон 0-100</h3>
+                    <p>4.7 сек</p>
+                </div>
+                <div class="spec-card">
+                    <h3>Макс. скорость</h3>
+                    <p>295 км/ч</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <h2>Галерея</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/countach-front.jpg" alt="Lamborghini Countach вид спереди">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/countach-side.jpg" alt="Lamborghini Countach вид сбоку">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/countach-rear.jpg" alt="Lamborghini Countach вид сзади">
+                </div>
+            </div>
+        </section>
+
+        <section id="legacy" class="section">
+            <h2>Наследие</h2>
+            <div class="content">
+                <p>Влияние Countach на автомобильный дизайн невозможно переоценить. Его радикальный стиль повлиял на дизайн суперкаров на десятилетия вперед, и его имя до сих пор вызывает восторг среди автолюбителей по всему миру.</p>
+                <p>В 2021 году Lamborghini представила Countach LPI 800-4, современную интерпретацию этого легендарного автомобиля, доказывая, что влияние Countach продолжает вдохновлять новые поколения.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Lamborghini Countach Tribute. Фан-сайт.</p>
+    </footer>
+</body>
 </html> 
