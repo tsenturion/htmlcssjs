@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="test1" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая вёрстка | Главная страница</title>
+    <style>
+       
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #f8f9fa;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header img {
+            height: 50px;
+            width: auto;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #e9ecef;
+            color: #0056b3;
+        }
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        footer {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <img src="https://avatars.mds.yandex.net/get-altay/1335362/2a00000186739662249f76fbb0748caf0e48/XXL_height" alt="Логотип компании" width="150" height="50">
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="#" aria-current="page">Главная</a></li>
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое -->
+    <main>
+        <article>
+            <h1>Добро пожаловать на наш сайт</h1>
+            <p>Это демонстрация семантической вёрстки с использованием HTML5.</p>
+            
+            <section>
+                <h2>Наши услуги</h2>
+                <p>Мы предлагаем широкий спектр услуг для вашего бизнеса.</p>
+            </section>
+            
+            <section>
+                <h2>Новости</h2>
+                <article>
+                    <h3>Обновление ассортимента</h3>
+                    <p>В нашем каталоге появились новые товары.</p>
+                </article>
+                <article>
+                    <h3>Специальное предложение</h3>
+                    <p>Только в этом месяце скидки на все услуги 15%.</p>
+                </article>
+            </section>
+        </article>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <p>&copy; 2023 Компания "Семантическая вёрстка". Все права защищены.</p>
+        <address>
+            Контакты: <a href="mailto:info@example.com" style="color: #fff;">info@example.com</a>
+        </address>
+    </footer>
+</body>
+</html>
