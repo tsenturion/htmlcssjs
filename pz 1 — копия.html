@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Современный сайт с CSS</title>
+    <style>
+        /* --- Общие стили и сброс --- */
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4cc9f0;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --success-color: #4ad66d;
+            --warning-color: #f8961e;
+            --danger-color: #ef233c;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--dark-color);
+            margin-top: 0;
+        }
+
+        /* --- Шапка (Header) --- */
+        header {
+            background: white;
+            color: var(--dark-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        header .logo a {
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        header .logo a:hover {
+            color: var(--secondary-color);
+        }
+
+        header .logo img {
+            height: 50px;
+            width: auto;
+            border-radius: 8px;
+        }
+
+        header nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        header nav a {
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        
+        header nav a:hover {
+            background-color: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        header nav a.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* --- Основное содержимое (Main) --- */
+        main.container {
+            display: flex;
+            gap: 30px; 
+            margin: 30px auto;
+        }
+
+        article {
+            flex: 3;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        article h1 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        article p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        aside {
+            flex: 1;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            align-self: flex-start;
+            position: sticky;
+            top: 100px;
+        }
+        
+        aside h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        aside ul {
+            margin-top: 20px;
+        }
+        
+        aside li {
+            margin-bottom: 12px;
+        }
+        
+        aside a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 6px;
+        }
+        
+        aside a:hover {
+            background-color: rgba(67, 97, 238, 0.1);
+        }
+
+        /* --- Подвал (Footer) --- */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 40px;
+        }
+        
+        footer .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        footer .footer-column h4 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        footer .footer-column h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 40px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+        
+        footer .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        footer .footer-column a {
+            color: #ddd;
+        }
+        
+        footer .footer-column a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+        
+        footer .copyright {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 6px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* --- Адаптивность для мобильных устройств --- */
+        @media(max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            
+            header nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            main.container {
+                flex-direction: column;
+            }
+            
+            aside {
+                position: static;
+            }
+            
+            footer .container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://avatarzo.ru/wp-content/uploads/squid-game-anime.jpg" alt="Логотип">
+                    МойСайт
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Главная</a></li>
+                    <li><a href="#">Каталог ресурсов</a></li>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>Основной заголовок статьи</h1>
+            <p>Это вступительный абзац основной статьи на странице. Здесь представлена важная информация, которая привлекает внимание посетителей и кратко описывает содержание страницы.</p>
+            <p>Современный дизайн сайта включает в себя чистые линии, достаточное пространство между элементами и приятную цветовую гамму, которая не утомляет глаза.</p>
+            <a href="#" class="btn">Узнать больше</a>
+        </article>
+        <aside>
+            <h3>Дополнительная информация</h3>
+            <p>Здесь может быть размещена полезная информация, ссылки или виджеты.</p>
+            <ul>
+                <li><a href="#">Популярные статьи</a></li>
+                <li><a href="#">Новости проекта</a></li>
+                <li><a href="#">Полезные ресурсы</a></li>
+                <li><a href="#">Архив</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-column">
+                <h4>О нас</h4>
+                <ul>
+                    <li><a href="#">История проекта</a></li>
+                    <li><a href="#">Наша команда</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Ресурсы</h4>
+                <ul>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Документация</a></li>
+                    <li><a href="#">Форум</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Поддержка</h4>
+                <ul>
+                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Сообщить о проблеме</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Соцсети</h4>
+                <ul>
+                    <li><a href="#">ВКонтакте</a></li>
+                    <li><a href="#">Telegram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Мой Проект. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
