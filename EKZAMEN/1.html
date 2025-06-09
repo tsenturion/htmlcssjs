@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая вёрстка</title>
+    <link href="Popup.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav>
+        <div class="nav-left">
+            <div class="logo">
+                <div class="logo-icon">T</div>
+                <span>Тягомотина</span>
+            </div>
+            
+            <div class="nav-links">
+                <div class="nav-link">Главная</div>
+                <div class="nav-link">О нас</div>
+                <div class="dropdown nav-link">
+                    <span>Ещё</span>
+                    <div class="dropdown-content">
+                        <div class="dropdown-item">Блог</div>
+                        <div class="dropdown-item">Контакты</div>
+                        <div class="dropdown-item">FAQ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="auth-btn" id="authBtn">Регистрация</button>
+    </nav>
+    
+    <!-- Основной контент -->
+    <div class="content">
+       <h3>Добро пожаловать на сайт "Тягомотина"</h3></li>
+       <ul>
+        <li><p><h7> Короче тут должно быть много чего, но разраб ну прям пипец какой рукожопый. Тут половина всего не работает, как верусь домой, может запилю чего интересного. </li>
+            <ul>
+            <li>А пока вот мое <a href=2.html>РЕЗЮМЕ</a> </h7></p></li>
+        </ul>
+    </div>
+    </div>
+    
+    <!-- Модальное окно регистрации -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+            
+            <div class="modal-header">
+                <h2>Регистрация</h2>
+                <p>Создайте аккаунт чтобы продолжить</p>
+            </div>
+            
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="username">Имя пользователя</label>
+                    <input type="text" id="username" class="form-control" placeholder="Придумайте логин" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" placeholder="Ваш email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" class="form-control" placeholder="Не менее 6 символов" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Toast уведомление -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">✓</div>
+        <div class="toast-message">Регистрация прошла успешно!</div>
+    </div>
+    
+    <script>
+        // Элементы DOM
+        const modalOverlay = document.getElementById('modalOverlay');
+        const authBtn = document.getElementById('authBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const registrationForm = document.getElementById('registrationForm');
+        const toast = document.getElementById('toast');
+        
+        // Показать модальное окно
+        authBtn.addEventListener('click', () => {
+            modalOverlay.classList.add('active');
+        });
+        
+        // Скрыть модальное окно
+        closeModalBtn.addEventListener('click', () => {
+            modalOverlay.classList.remove('active');
+        });
+        
+        // Скрыть при клике вне модалки
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) {
+                modalOverlay.classList.remove('active');
+            }
+        });
+        
+        // Обработка формы регистрации
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Здесь должна быть реальная регистрация
+            // Для демонстрации просто покажем toast
+            
+            // Скрываем модальное окно
+            modalOverlay.classList.remove('active');
+            
+            // Показываем toast
+            toast.classList.add('show');
+            
+            // Скрываем toast через 5 секунд
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+            
+            // Очищаем форму
+            registrationForm.reset();
+        });
+    </script>
+</body>
+</html>
