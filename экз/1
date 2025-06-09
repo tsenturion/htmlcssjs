@@ -1,0 +1,23 @@
+index.html
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <title>Пример семантической шапки</title>
+</head>
+<body>
+<header>
+    <img src="logo.png" alt="Логотип сайта" />
+    <nav>
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог ресурсов</a></li>
+            <li><a href="#">О проекте</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    <img src="logo.png" alt="Логотип сайта"/>
+</header>
+</body>
+</html>
