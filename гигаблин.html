@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гигаблин</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Мой CSS -->
+  <style>
+    .hero-section {
+      background: url('https://via.placeholder.com/1920x600') no-repeat center;
+      background-size: cover;
+      padding: 150px 0;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Навигация -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Гигаблин</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Главная</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- //Здесь будут остальные секции -->
+
+Кнопка "Наверх"
+<button onclick="topFunction()" id="toTopBtn" class="btn btn-primary rounded-circle position-fixed bottom-0 end-0 m-3" 
+        style="width: 50px; height: 50px; display: none;">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<script>
+  // Показываем кнопку при прокрутке
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      document.getElementById("toTopBtn").style.display = "block";
+    } else {
+      document.getElementById("toTopBtn").style.display = "none";
+    }
+  };
+  
+  // Плавный скролл вверх
+  function topFunction() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+
+<!-- Параллакс-секция -->
+<section class="parallax-section py-5 text-white d-flex align-items-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="display-4 fw-bold mb-4">Инновационные решения</h2>
+          <p class="lead mb-5">Мы используем передовые технологии от кайбер-кристалов до ведьмачьей брони</p>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Сделать заказ</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .parallax-section {
+      background-image: url('https://avatars.mds.yandex.net/i?id=2a50f81969e375cf7cd59c195c65e8d8_l-5220389-images-thumbs&n=13');
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 400px;
+      position: relative;
+    }
+    
+    .parallax-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    
+    .parallax-section > * {
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+
+
+<!-- Галерея проектов -->
+<section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5">Наши работы</h2>
+      <div class="row g-3">
+        <!-- Проект 1 -->
+        <div class="col-md-4 col-6">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal1">
+            <img src="https://via.placeholder.com/600x400" alt="Проект 1" class="img-fluid rounded zoom-effect">
+          </a>
+        </div>
+        <!-- Проект 2 -->
+        <div class="col-md-4 col-6">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal2">
+            <img src="https://via.placeholder.com/600x400" alt="Проект 2" class="img-fluid rounded zoom-effect">
+          </a>
+        </div>
+        <!-- Проект 3 -->
+        <div class="col-md-4 col-6">
+          <a href="#" data-bs-toggle="modal" data-bs-target="#projectModal3">
+            <img src="https://via.placeholder.com/600x400" alt="Проект 3" class="img-fluid rounded zoom-effect">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Модальные окна для галереи -->
+  <div class="modal fade" id="projectModal1" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Зачистка деревни от гулей</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://via.placeholder.com/800x500" class="img-fluid" alt="Детали проекта">
+          <p class="mt-3">Полное описание проекта и используемых технологий.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<!-- Наша команда -->
+<section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Наша CUMанда</h2>
+      <div class="row">
+        <!-- Член команды 1 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 bg-transparent">
+            <img src="https://via.placeholder.com/300" class="card-img-top rounded-circle w-50 mx-auto" alt="Кибердека">
+            <div class="card-body text-center">
+              <h4 class="card-title">Встанислав Шишкин</h4>
+              <p class="text-muted">Киберпанк 2077</p>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="text-dark mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Член команды 2 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 bg-transparent">
+            <img src="https://via.placeholder.com/300" class="card-img-top rounded-circle w-50 mx-auto" alt="Учитель">
+            <div class="card-body text-center">
+              <h4 class="card-title">Кэл Кестис</h4>
+              <p class="text-muted">Джедай</p>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="text-dark mx-2"><i class="bi bi-github"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-stack-overflow"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Член команды 3 -->
+        <div class="col-md-4 mb-4">
+          <div class="card border-0 bg-transparent">
+            <img src="https://via.placeholder.com/300" class="card-img-top rounded-circle w-50 mx-auto" alt="Мутант">
+            <div class="card-body text-center">
+              <h4 class="card-title">Геральт из Ривии</h4>
+              <p class="text-muted">Ведьмак</p>
+              <div class="d-flex justify-content-center">
+                <a href="#" class="text-dark mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+<!-- Контакты -->
+<section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Свяжитесь с нами</h2>
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Ваше имя</label>
+              <input type="text" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Заявка на прохождение игры</label>
+              <textarea class="form-control" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Статистика -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <!-- Клиенты -->
+        <div class="col-md-3 mb-4">
+          <div class="counter" data-target="450">0</div>
+          <p>Довольных клиентов</p>
+        </div>
+        <!-- Проекты -->
+        <div class="col-md-3 mb-4">
+          <div class="counter" data-target="550">0</div>
+          <p>Завершенных Заказов</p>
+        </div>
+        <!-- Опыт -->
+        <div class="col-md-3 mb-4">
+          <div class="counter" data-target="25">0</div>
+          <p>Лет опыта</p>
+        </div>
+        <!-- Награды -->
+        <div class="col-md-3 mb-4">
+          <div class="counter" data-target="12">0</div>
+          <p>Профессиональных наград</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .counter {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+  
+  <script>
+    // Анимация счетчиков
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200;
+    
+    function animateCounters() {
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / speed;
+        
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(animateCounters, 1);
+        } else {
+          counter.innerText = target;
+        }
+      });
+    }
+    
+    // Запускаем при прокрутке
+    window.addEventListener('scroll', function() {
+      const section = document.querySelector('.bg-primary');
+      const sectionPosition = section.getBoundingClientRect().top;
+      const screenPosition = window.innerHeight / 1.3;
+      
+      if (sectionPosition < screenPosition) {
+        animateCounters();
+      }
+    });
+  </script>
+
+
+
+<!-- Частые вопросы -->
+<section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5">Частые вопросы</h2>
+      <div class="accordion" id="faqAccordion">
+        <!-- Вопрос 1 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#question1">
+              Сколько стоит заказ?
+            </button>
+          </h3>
+          <div id="question1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Стоимость зависит от сложности заказа. Простой утопец — от 20 крон, леший — от 85 крон.
+            </div>
+          </div>
+        </div>
+        <!-- Вопрос 2 -->
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question2">
+              Как долго выпоняется заказ?
+            </button>
+          </h3>
+          <div id="question2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Все зависит от скорости Плотвы и дройдеков. 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Наши навыки -->
+<section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-5">Наши преимущества</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h4>Улучшение кибердеки</h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%">95%</div>
+          </div>
+          
+          <h4>Владение силой</h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%">85%</div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <h4>Современные дройдеки</h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%">80%</div>
+          </div>
+          
+          <h4>Ведьмачье дело</h4>
+          <div class="progress mb-4">
+            <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%">90%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Футер -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p>© 2025 Гигаблин. Все права защищены наверное.</p>
+      <div class="social-links">
+        <a href="#" class="text-white mx-2"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-twitter"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!-- Hero-секция -->
+<section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Добро пожаловать на Гигаблин!</h1>
+      <p class="lead">Здесь я профессионально прохожу игры</p>
+      <a href="#services" class="btn btn-primary btn-lg">Узнать больше</a>
+    </div>
+  </section>
+
+
+<!-- Отзывы клиентов (карусель) -->
+<section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5">Отзывы клиентов</h2>
+      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Отзыв 1 -->
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="text-center p-4">
+                  <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Клиент">
+                  <p class="lead">"Отлично убивают нечисть"</p>
+                  <h5>Зираэь (Цири)</h5>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Отзыв 2 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="text-center p-4">
+                  <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Клиент">
+                  <p class="lead">"Бла бла бла взрывать арасаку бла бла бить микоши."</p>
+                  <h5>Джони Сильверхенд</h5>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Отзыв 3 -->
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="text-center p-4">
+                  <img src="https://via.placeholder.com/100" class="rounded-circle mb-3" alt="Клиент">
+                  <p class="lead">"Ну и где наши дройдеки."</p>
+                  <h5>Рун Хаако</h5>
+                  <div class="text-warning">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Кнопки управления -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Услуги -->
+<section id="services" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Наши услуги</h2>
+    <div class="row">
+      <!-- Карточка 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-laptop fs-1 text-primary"></i>  
+            <h3 class="card-title">Убийство чудищ</h3>
+            <p class="card-text">Создаем современные мечи и доспехи.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-phone fs-1 text-success"></i>
+            <h3 class="card-title">Световые мечи</h3>
+            <p class="card-text">Научим создавать Кайбер-кристалы.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Карточка 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <i class="bi bi-graph-up fs-1 text-warning"></i>
+            <h3 class="card-title">Улучшение кибердеки</h3>
+            <p class="card-text">Создание новых имплантов.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
