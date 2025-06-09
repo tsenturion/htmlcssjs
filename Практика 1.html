@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая вёрстка с CSS</title>
+    <style>
+        /* --- Общие стили и сброс --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        /* --- Шапка (Header) --- */
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            border-bottom: #1abc9c 3px solid;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* -------------------------- */
+        /* ИЗМЕНЕНЫ СТИЛИ ДЛЯ ЛОГОТИПА */
+        /* -------------------------- */
+        header .logo a {
+            color: #fff;
+            text-decoration: none;
+            display: flex; /* Включаем Flexbox для выравнивания картинки и текста */
+            align-items: center; /* Выравниваем их по центру по вертикали */
+        }
+         header .logo a:hover {
+            text-decoration: none;
+        }
+
+        /* -------------------------- */
+        /* ДОБАВЛЕНЫ СТИЛИ ДЛЯ КАРТИНКИ В ЛОГОТИПЕ */
+        /* -------------------------- */
+        header .logo img {
+            height: 40px; /* <-- ЗАДАЕМ МАЛЕНЬКИЙ РАЗМЕР */
+            width: auto; /* Ширина подстроится автоматически */
+            margin-right: 10px; /* Отступ между картинкой и текстом */
+        }
+
+        header nav ul {
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav a {
+            color: #fff;
+            font-weight: bold;
+        }
+         header nav a:hover {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        /* --- Основное содержимое (Main) --- */
+        main.container {
+            display: flex;
+            gap: 30px; 
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        article {
+            flex: 3;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        aside {
+            flex: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-self: flex-start;
+        }
+        
+        aside h3 {
+            margin-top: 0;
+        }
+
+        /* --- Подвал (Footer) --- */
+        footer {
+            background: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+        
+        footer nav {
+            margin-top: 10px;
+        }
+        
+        footer nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        footer nav a {
+            color: #fff;
+        }
+        
+        footer nav a:hover {
+            color: #1abc9c;
+        }
+
+        /* --- Адаптивность для мобильных устройств --- */
+        @media(max-width: 768px) {
+            header .container,
+            main.container {
+                flex-direction: column;
+                text-align: center;
+            }
+            header .logo a {
+                justify-content: center; /* Центрируем лого на мобильных */
+            }
+            
+            header nav ul {
+                flex-direction: column;
+                margin-top: 15px;
+            }
+
+            header nav ul li {
+                margin: 5px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">
+                    <img src="https://ae04.alicdn.com/kf/Safcb63031cd446bfab9851870ab66334i.jpg" alt="Логотип">
+                    МойСайт
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Каталог ресурсов</a></li>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article>
+            <h1>Основной заголовок статьи</h1>
+            <p>Это вступительный абзац основной статьи на странице...</p>
+        </article>
+        <aside>
+            <h3>Дополнительная информация</h3>
+            <p>Здесь может быть размещена информация...</p>
+        </aside>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Мой Проект. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
