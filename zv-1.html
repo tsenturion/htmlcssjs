@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семантическая вёрстка</title>
+    <style>
+        header {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            padding: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        header > img {
+            height: 30px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333333;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        nav a[aria-current="page"] {
+            color: #0066cc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Логотип сайта">
+        <nav>
+            <ul>
+                <li><a href="/" aria-current="page">Главная</a></li>
+                <li><a href="/каталог">Каталог</a></li>
+                <li><a href="/spasibo">О проекте</a></li>
+                <li><a href="/50rybli">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основное содержимое страницы -->
+    <main>
+        <h1>Добро пожаловать на наш сайт</h1>
+        <p>Здравствуйте! Как ваши дела? Как погода?.</p>
+    </main>
+</body>
+</html>
