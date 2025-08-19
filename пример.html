@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid + Flexbox Пример</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .layout {
+            display: grid;
+            grid-template-columns: 3fr 1fr; /* контент и сайдбар */
+            grid-template-rows: auto 1fr auto;
+            min-height: 100vh;
+            gap: 10px;
+            border: 2px solid #333;
+            padding: 10px;
+        }
+
+        /* Grid-области */
+        .header {
+            grid-column: 1 / 3; 
+            background: lightblue;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .content {
+            background: #fafafa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .sidebar {
+            background: #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .footer {
+            grid-column: 1 / 3;
+            background: lightgreen;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        /* Внутри контента используем Flexbox */
+        .products {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .card {
+            background: lightcoral;
+            padding: 20px;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <header class="header">Меню навигации</header>
+        <main class="content">
+            <div class="products">
+                <div class="card">Товар 1</div>
+                <div class="card">Товар 2</div>
+                <div class="card">Товар 3</div>
+                <div class="card">Товар 4</div>
+                <div class="card">Товар 5</div>
+                <div class="card">Товар 6</div>
+            </div>
+        </main>
+        <aside class="sidebar">Боковая панель<br>Фильтры<br>Реклама</aside>
+        <footer class="footer">© 2025 Футер сайта</footer>
+    </div>
+</body>
+</html>
