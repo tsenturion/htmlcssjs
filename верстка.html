@@ -1,0 +1,73 @@
+<div class="menu">
+    <a href="#">Главная</a>
+    <a href="#">О нас</a>
+    <a href="#">Услуги</a>
+    <a href="#">Контакты</a>
+</div>
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background: #eee;
+    padding: 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+<div class="products">
+    <div class="card">Товар 1</div>
+    <div class="card">Товар 2</div>
+    <div class="card">Товар 3</div>
+</div>
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    background: lightblue;
+}
+
+<body>
+    <div class="wrapper">
+        <main class="content">Основное содержимое</main>
+        <footer class="footer">Подвал</footer>
+    </div>
+</body>
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.content {
+    flex: 1;
+}
+.footer {
+    background: #ccc;
+    padding: 20px;
+}
+
+flix-direction: row | row-reverse | column | column-reverse;
+
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;
+align-items: flex-start | flex-end | center | baseline | stretch;
+
+align-self 
+flex-grow 
+flex-shrink
+flex-basis
+
+flex: flex-grow flex-shrink flex-basis;
