@@ -1,5 +1,6 @@
 ecmel.vscode-html-css
 techer.open-in-browser
-Codeium.codeium
+bradlc.vscode-tailwindcss
+stivo.tailwind-fold
 
 https://tpverstak.ru/flex-cheatsheet/
