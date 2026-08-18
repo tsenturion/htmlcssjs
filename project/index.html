@@ -1,156 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Мой сайт</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
-    <header>
+    <h1>Изучаем CSS</h1>
 
-        <a href="index.html">
-            TOP Academy
-        </a>
+    <p>
+        CSS подключён отдельным файлом.
+    </p>
 
-        <nav>
-            <a href="#courses">Курсы</a>
-            <a href="#about">О нас</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
+    <p class="important">
+        Очень важный текст
+    </p>
 
-    </header>
+    <div class="card">
+        Карточка
+    </div>
 
+    <div class="card">
+        Первый курс
+    </div>
 
-    <main>
+    <div class="card">
+        Второй курс
+    </div>
 
-        <section>
+    <div class="card">
+        Третий курс
+    </div>
 
-            <h1>
-                Создавай сайты с нуля
-            </h1>
+    <button class="button primary large">
+        Купить
+    </button>
 
-            <p>
-                Освой HTML, CSS и Tailwind CSS.
-            </p>
+    <section id="contacts">
+        Контакты
+    </section>
 
-            <a href="#registration">
-                Начать обучение
-            </a>
+    <p>Текст вне карточки</p>
 
-        </section>
-
-
-        <section id="courses">
-
-            <h2>
-                Наши направления
-            </h2>
-
-            <article>
-
-                <h3>HTML</h3>
-
-                <p>
-                    Создаём структуру веб-страниц.
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <h3>CSS</h3>
-
-                <p>
-                    Оформляем интерфейсы.
-                </p>
-
-            </article>
-
-
-            <article>
-
-                <h3>Tailwind CSS</h3>
-
-                <p>
-                    Создаём современные интерфейсы быстрее.
-                </p>
-
-            </article>
-
-        </section>
-
-
-        <section id="about">
-
-            <h2>
-                Почему выбирают нас
-            </h2>
-
-        </section>
-
-
-        <section>
-
-            <h2>
-                Наши результаты
-            </h2>
-
-        </section>
-
-
-        <section>
-
-            <h2>
-                Отзывы
-            </h2>
-
-        </section>
-
-
-        <section id="registration">
-
-            <h2>
-                Записаться на курс
-            </h2>
-
-            <form>
-
-                <label for="student-name">
-                    Имя
-                </label>
-
-                <input
-                    id="student-name"
-                    type="text"
-                    name="name"
-                    required
-                >
-
-
-                <label for="student-email">
-                    Email
-                </label>
-
-                <input
-                    id="student-email"
-                    type="email"
-                    name="email"
-                    required
-                >
-
-
-                <button type="submit">
-                    Отправить
-                </button>
-
-            </form>
-
-        </section>
-
-    </main>
-
-
-    <footer id="contacts">
-
-        <p>
-            © 2026 TOP Academy
-        </p>
-
-    </footer>
-
+    <div class="card">
+        <p>Текст внутри карточки</p>
+    </div>
 </body>
+</html>
