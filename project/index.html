@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Курс веб-разработки</title>
-</head>
-
 <body>
 
     <header>
@@ -22,9 +7,8 @@
         </a>
 
         <nav>
-            <a href="#about">О курсе</a>
-            <a href="#program">Программа</a>
-            <a href="#teachers">Преподаватели</a>
+            <a href="#courses">Курсы</a>
+            <a href="#about">О нас</a>
             <a href="#contacts">Контакты</a>
         </nav>
 
@@ -33,71 +17,135 @@
 
     <main>
 
-        <section id="about">
+        <section>
 
-            <h1>Веб-разработка с нуля</h1>
+            <h1>
+                Создавай сайты с нуля
+            </h1>
 
             <p>
-                Научитесь создавать современные сайты
-                на HTML, CSS и Tailwind CSS.
+                Освой HTML, CSS и Tailwind CSS.
             </p>
 
             <a href="#registration">
-                Записаться
+                Начать обучение
             </a>
 
         </section>
 
 
-        <section id="program">
+        <section id="courses">
 
-            <h2>Программа курса</h2>
+            <h2>
+                Наши направления
+            </h2>
 
             <article>
+
                 <h3>HTML</h3>
 
                 <p>
-                    Изучаем структуру веб-страниц.
+                    Создаём структуру веб-страниц.
                 </p>
+
             </article>
 
+
             <article>
+
                 <h3>CSS</h3>
 
                 <p>
-                    Учимся оформлять интерфейсы.
+                    Оформляем интерфейсы.
                 </p>
+
             </article>
 
+
             <article>
+
                 <h3>Tailwind CSS</h3>
 
                 <p>
-                    Создаём современные интерфейсы
-                    с помощью utility-классов.
+                    Создаём современные интерфейсы быстрее.
                 </p>
+
             </article>
 
         </section>
 
 
-        <section id="teachers">
+        <section id="about">
 
-            <h2>Преподаватели</h2>
+            <h2>
+                Почему выбирают нас
+            </h2>
 
         </section>
 
 
-        <section id="contacts">
+        <section>
 
-            <h2>Контакты</h2>
+            <h2>
+                Наши результаты
+            </h2>
+
+        </section>
+
+
+        <section>
+
+            <h2>
+                Отзывы
+            </h2>
+
+        </section>
+
+
+        <section id="registration">
+
+            <h2>
+                Записаться на курс
+            </h2>
+
+            <form>
+
+                <label for="student-name">
+                    Имя
+                </label>
+
+                <input
+                    id="student-name"
+                    type="text"
+                    name="name"
+                    required
+                >
+
+
+                <label for="student-email">
+                    Email
+                </label>
+
+                <input
+                    id="student-email"
+                    type="email"
+                    name="email"
+                    required
+                >
+
+
+                <button type="submit">
+                    Отправить
+                </button>
+
+            </form>
 
         </section>
 
     </main>
 
 
-    <footer>
+    <footer id="contacts">
 
         <p>
             © 2026 TOP Academy
@@ -106,5 +154,3 @@
     </footer>
 
 </body>
-
-</html>
